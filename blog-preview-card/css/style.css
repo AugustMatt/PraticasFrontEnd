@@ -1,3 +1,12 @@
+/* ---- Variables ---- */
+:root {
+    --Yellow: #f4d04e;
+    --Gray-950: #111111;
+    --Gray-500: #6B6B6B;
+    --Card-color: #ffffff;
+}
+
+/* ---- Font Imports ---- */
 @font-face {
     font-family: 'Figtree';
     src: url('../fonts/Figtree/static/Figtree-ExtraBold.ttf') format('truetype');
@@ -12,122 +21,132 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Figtree';
-    src: url('../fonts/Figtree/static/Figtree-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-
+/* ---- General Typography ---- */
 html {
+    font-family: 'Figtree', sans-serif; 
     font-size: 62.5%; /* 10px */
-    color: #111111;
+    color: var(--Gray-950);
 }
 
-body {
-    background-color: #f4d04e;
-    height: 100vh;
+/* ---- Shared Typography ---- */
+.category p, .title, .publish-date, .description, .card-footer p {
+    line-height: 150%;
+
+}
+
+.category p, .publish-date, .card-footer p {
+    font-size: 1.4rem;
+}
+
+/* ---- Category Typography ---- */
+.category p {
+    font-weight: 800;
+}
+
+/* ---- Publish Date Typography ---- */
+.publish-date {
+    font-weight: 500;
+}
+
+/* ---- Title Typography ---- */
+.title {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 800;
+    font-size: 2.4rem;
+}
+
+/* ---- Description Typography ---- */
+.description {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--Gray-500);
+}
+
+/* ---- Card Footer Text Typography ---- */
+.card-footer p {
+    font-weight: 800;
+}
+
+
+/* ---- General Layout Styles ---- */
+* {
+    box-sizing: border-box;
+}
+
+/* ---- Shared Layout Styles ---- */
+body, .card-body p, .card-body a, .card-footer p {
     margin: 0px;
+}
+
+.content, .card, .card-body, .card-footer {
+    display: flex;
+}
+
+.card, .card-body {
+    flex-direction: column;
+}
+
+.blog-logo-img, .card-body {
+    width: 336px;
+}
+
+/* ---- General Layout Styles ---- */
+body {
+    background-color: var(--Yellow);
 }
 
 .content {
     display: flex;
     justify-content: center;
-    height: 100%;
     align-items: center;
+    height: 100vh;
 }
 
-.content .card {
-    box-sizing: border-box;
+/* ---- Card Styles ---- */
+.card {
     width: 384px;
     height: 522px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    border: 1px solid #111111;
-    /* outline: 1px solid #111111;
-    outline-offset: -1px; */
-    box-shadow: 8px 8px 0px #000000;
+    background-color: var(--Card-color);
     padding: 24px;
-    display: flex;
-    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid var(--Gray-950);
+    box-shadow: 8px 8px 0px #000000;
     row-gap: 24px;
 }
 
-.content .card .blog-logo-img {
-    width: 336px;
-}
-
-.content .card .card-body {
-    width: 336px;
-    display: flex;
-    flex-direction: column;
+/* ---- Card Body Styles ---- */
+.card-body {
     row-gap: 12px;
 }
 
-.content .card .card-body .category {
-    box-sizing: border-box;
-    background-color: #f4d04e;
+/* ---- Category Styles ---- */
+.category {
+    background-color: var(--Yellow);
     width: 82px;
     border-radius: 4px;
     padding: 4px 12px;
 }
 
-.content .card .card-body .category p {
-    margin: 0px;
-    font-family: 'Figtree', sans-serif;
-    font-weight: 800;
-    font-size: 1.4rem;
-    line-height: 150%;
-    letter-spacing: 0px;
-}
-
-.content .card .card-body .publish-date {
-    margin: 0px;
-    font-family: 'Figtree', sans-serif;
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 150%;
-    letter-spacing: 0px;
+/* ---- Publish Date Styles ---- */
+.publish-date {
     width: 143px;
 }
 
-.content .card .card-body .title {
-    margin: 0px;
-    font-family: 'Figtree', sans-serif;
-    font-weight: 800;
-    font-size: 2.4rem;
-    line-height: 150%;
-    letter-spacing: 0px;
+/* ---- Title Hover Effects ---- */
+.title:hover{
+    color: var(--Yellow)
 }
 
-.content .card .card-body .description {
-    margin: 0px;
-    font-family: 'Figtree', sans-serif;
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 150%;
-    letter-spacing: 0px;
-    color: #6B6B6B;
-}
-
-.content .card .card-footer {
-    margin: 0px;
-    display: flex;
+/* ---- Card Footer Styles ---- */
+.card-footer {
     column-gap: 12px;
     align-items: center;
     width: 129px;
 }
 
-.content .card .card-footer img {
+/* ---- Card Footer Image Styles ---- */
+.card-footer img {
     width: 32px;
     height: 32px;
-}
-
-.content .card .card-footer p {
-    margin: 0px;
-    font-family: 'Figtree', sans-serif;
-    font-weight: 800;
-    font-size: 1.4rem;
-    line-height: 150%;
-    letter-spacing: 0px;
 }
