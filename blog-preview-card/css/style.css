@@ -68,6 +68,22 @@ html {
     font-weight: 800;
 }
 
+/* ---- Mobile Typography ---- */
+@media (max-width: 376px) {  
+
+    .category p, .publish-date {
+        font-size: 1.2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.4rem;
+    }
+}
+
 
 /* ---- General Layout Styles ---- */
 * {
@@ -138,6 +154,10 @@ body {
     color: var(--Yellow)
 }
 
+.title:focus {
+    color: var(--Yellow);
+}
+
 /* ---- Card Footer Styles ---- */
 .card-footer {
     column-gap: 12px;
@@ -149,4 +169,43 @@ body {
 .card-footer img {
     width: 32px;
     height: 32px;
+}
+
+/* ---- Mobile Styles ---- */
+@media (max-width: 376px) {  
+
+    .card {
+        width: 327px;
+        height: 501px;
+    }
+
+    .blog-logo-img {
+        width: 279px;
+        height: 200px;
+    }
+
+    .card-body {
+        width: 279px;
+    }
+
+    .category {
+        width: 73px;
+    }
+
+    .publish-date {
+        width: 123px;
+    }
+
+    .title {
+        width: 279px;
+    }
+
+    .title:active {
+        color: var(--Yellow);
+    }
+
+    .description {
+        width: 279px;
+    }
+
 }
