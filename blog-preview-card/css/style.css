@@ -121,7 +121,8 @@ body {
 
 /* ---- Card Styles ---- */
 .card {
-    width: 384px;
+    width: 100%;
+    max-width: 384px;
     height: 522px;
     background-color: var(--Card-color);
     padding: 24px;
@@ -175,7 +176,8 @@ body {
 @media (max-width: 376px) {  
 
     .card {
-        width: 327px;
+        width: 100%;
+        max-width: 327px;
         height: 501px;
     }
 
